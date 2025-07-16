@@ -1,3 +1,5 @@
+import DarkModeToggle from "./ThemeToggle";
+
 const Navbar = () => {
   return (
     <nav className="flex justify-between items-center py-4 px-6 shadow-md sticky top-0 bg-white z-50">
@@ -9,6 +11,7 @@ const Navbar = () => {
         <li><a href="#achievements" className="hover:text-blue-500">Achievements</a></li>
         <li><a href="#experience" className="hover:text-blue-500">Experience</a></li>
         <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
+        {/* <DarkModeToggle /> */}
       </ul>
     </nav>
   );

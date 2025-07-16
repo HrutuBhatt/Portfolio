@@ -1,5 +1,5 @@
 // src/components/Socials.tsx
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import {MdEmail} from "react-icons/md";
 

@@ -19,22 +19,22 @@ const experience = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="bg-gray-50 py-12 px-6">
-      <h2 className="text-3xl font-bold mb-10 text-center">Experience</h2>
-      <div className="max-w-4xl mx-auto relative border-l-4 border-blue-500 pl-6 space-y-12">
+    <section id="experience" className="bg-gray-50 dark:bg-gray-900 py-12 px-6 transition-colors duration-500">
+    <h2 className="text-3xl font-bold mb-10 text-center text-gray-900 dark:text-white">Experience</h2>
+    <div className="max-w-4xl mx-auto relative border-l-4 border-blue-500 pl-6 space-y-12">
         {experience.map((item, index) => (
-          <div key={index} className="relative pl-6">
-            <div className="absolute -left-3 top-1 w-6 h-6 bg-blue-500 rounded-full border-4 border-white"></div>
-            <h3 className="text-xl font-semibold">{item.org}</h3>
-            <span className="text-sm text-gray-600">{item.duration}</span>
-            <ul className="list-disc pl-6 mt-2 text-gray-700 text-sm space-y-1">
-              {item.description.map((point, i) => (
+        <div key={index} className="relative pl-6">
+            <div className="absolute -left-3 top-1 w-6 h-6 bg-blue-500 rounded-full border-4 border-white dark:border-gray-900"></div>
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{item.org}</h3>
+            <span className="text-sm text-gray-600 dark:text-gray-400">{item.duration}</span>
+            <ul className="list-disc pl-6 mt-2 text-gray-700 dark:text-gray-300 text-sm space-y-1">
+            {item.description.map((point, i) => (
                 <li key={i}>{point}</li>
-              ))}
+            ))}
             </ul>
-          </div>
+        </div>
         ))}
-      </div>
+    </div>
     </section>
   );
 };

@@ -24,28 +24,33 @@ const achievements = [
 
 const Achievements = () => {
   return (
-    <section id="achievements" className="bg-white p-10">
-      <h2 className="text-3xl font-bold mb-6 text-center">Achievements</h2>
-      <ul className="space-y-4 max-w-3xl mx-auto">
+    <section id="achievements" className="bg-white dark:bg-gray-900 p-10 transition-colors duration-500">
+    <h2 className="text-3xl font-bold mb-6 text-center text-gray-900 dark:text-white">Achievements</h2>
+    <ul className="space-y-4 max-w-3xl mx-auto">
         {achievements.map((item, idx) => (
-          <li key={idx} className="bg-gray-50 p-4 rounded-md shadow-sm hover:shadow-md transition">
-            <p className="text-lg font-medium">
-              {item.title}
-              {item.link && (
+        <li
+            key={idx}
+            className="bg-gray-50 dark:bg-gray-800 p-4 rounded-md shadow-sm hover:shadow-md transition"
+        >
+            <p className="text-lg font-medium text-gray-900 dark:text-white">
+            {item.title}
+            {item.link && (
                 <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 underline ml-2 text-sm"
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 underline ml-2 text-sm"
                 >
-                  [link]
+                [link]
                 </a>
-              )}
+            )}
             </p>
-            {item.description && <p className="text-sm text-gray-700">{item.description}</p>}
-          </li>
+            {item.description && (
+            <p className="text-sm text-gray-700 dark:text-gray-300">{item.description}</p>
+            )}
+        </li>
         ))}
-      </ul>
+    </ul>
     </section>
   );
 };

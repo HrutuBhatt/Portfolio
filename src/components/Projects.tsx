@@ -37,45 +37,68 @@ const projects: Project[] = [
 ];
 
 const Projects = () => {
-  return (
-    <section id="projects" className="p-10 bg-gray-50">
-      <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project, idx) => (
-          <div key={idx} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div className="relative h-48 w-full">
-              <Image
-                src={project.image}
-                alt={`${project.title} screenshot`}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-t-xl"
-              />
+    return (
+        <section id="projects" className="p-10 bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
+            <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">
+            Projects
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, idx) => (
+                <div
+                key={idx}
+                className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                >
+                <div className="relative h-48 w-full">
+                    <Image
+                    src={project.image}
+                    alt={`${project.title} screenshot`}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-t-xl"
+                    />
+                </div>
+                <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+                    {project.title}
+                    </h3>
+                    <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
+                    {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech, i) => (
+                        <span
+                        key={i}
+                        className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100 text-xs px-2 py-1 rounded"
+                        >
+                        {tech}
+                        </span>
+                    ))}
+                    </div>
+                    <div className="flex gap-4 text-sm">
+                    <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 dark:text-blue-400 hover:underline"
+                    >
+                        GitHub
+                    </a>
+                    <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 dark:text-blue-400 hover:underline"
+                    >
+                        Demo
+                    </a>
+                    </div>
+                </div>
+                </div>
+            ))}
             </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-700 text-sm mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tech.map((tech, i) => (
-                  <span key={i} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="flex gap-4 text-sm">
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                  GitHub
-                </a>
-                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                  Demo
-                </a>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
+        </section>
+    );
+
 };
 
 export default Projects;
