@@ -39,7 +39,7 @@ const projects: Project[] = [
 const Projects = () => {
     return (
         <section id="projects" className="p-10 bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
-            <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">
+            <h2 className="text-4xl font-bold mb-8 text-center text-gray-900 dark:text-white">
             Projects
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

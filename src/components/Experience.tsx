@@ -20,7 +20,7 @@ const experience = [
 const Experience = () => {
   return (
     <section id="experience" className="bg-gray-50 dark:bg-gray-900 py-12 px-6 transition-colors duration-500">
-    <h2 className="text-3xl font-bold mb-10 text-center text-gray-900 dark:text-white">Experience</h2>
+    <h2 className="text-4xl font-bold mb-10 text-center text-gray-900 dark:text-white">Experience</h2>
     <div className="max-w-4xl mx-auto relative border-l-4 border-blue-500 pl-6 space-y-12">
         {experience.map((item, index) => (
         <div key={index} className="relative pl-6">

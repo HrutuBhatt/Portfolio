@@ -25,7 +25,7 @@ const achievements = [
 const Achievements = () => {
   return (
     <section id="achievements" className="bg-white dark:bg-gray-900 p-10 transition-colors duration-500">
-    <h2 className="text-3xl font-bold mb-6 text-center text-gray-900 dark:text-white">Achievements</h2>
+    <h2 className="text-4xl font-bold mb-6 text-center text-gray-900 dark:text-white">Achievements</h2>
     <ul className="space-y-4 max-w-3xl mx-auto">
         {achievements.map((item, idx) => (
         <li
