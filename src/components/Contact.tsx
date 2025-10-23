@@ -1,37 +1,37 @@
 'use client';
 
-import { useState } from "react";
+// import { useState } from "react";
 
 export default function Contact() {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [status, setStatus] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [message, setMessage] = useState("");
+  // const [status, setStatus] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("Sending...");
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setStatus("Sending...");
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, message }),
-    });
+  //   const res = await fetch("/api/contact", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({ email, message }),
+  //   });
 
-    if (res.ok) {
-      setStatus("Message sent successfully!");
-      setEmail("");
-      setMessage("");
-    } else {
-      setStatus("Failed to send message.");
-    }
-  };
+  //   if (res.ok) {
+  //     setStatus("Message sent successfully!");
+  //     setEmail("");
+  //     setMessage("");
+  //   } else {
+  //     setStatus("Failed to send message.");
+  //   }
+  // };
 
   return (
     <section id="contact" className="py-20 px-4 bg-slate-100 dark:bg-slate-900 text-center transition-colors duration-500">
     <h1 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">Get In Touch</h1>
-    <h2 className="text-2xl  mb-6 text-gray-900 ">Wanna connect? Let's connect on Linkedin, or directly email me on hrutubhatt04@gmail.com.<br/> I am open for collaborations and contributions. </h2>
+    <h2 className="text-2xl  mb-6 text-gray-900 ">Wanna connect? Let&apos;s connect on Linkedin, or directly email me on hrutubhatt04@gmail.com.<br/> I am open for collaborations and contributions. </h2>
     {/* <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-4 text-left"> 
         <input
         type="email"
