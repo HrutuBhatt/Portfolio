@@ -31,7 +31,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 px-4 bg-slate-100 dark:bg-slate-900 text-center transition-colors duration-500">
     <h1 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">Get In Touch</h1>
-    <h2 className="text-2xl  mb-6 text-gray-900 ">Wanna connect? Let&apos;s connect on Linkedin, or directly email me on hrutubhatt04@gmail.com.<br/> I am open for collaborations and contributions. </h2>
+    <h2 className="text-2xl  mb-6 text-gray-900 ">Wanna connect? Let&apos;s connect on Linkedin, or directly email me at hrutubhatt04@gmail.com.<br/> I am open for collaborations and contributions. </h2>
     {/* <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-4 text-left"> 
         <input
         type="email"
