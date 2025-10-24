@@ -18,9 +18,9 @@ const About = () => {
       </p>
       <br></br><br></br>
       <h2 className="text-3xl font-bold mb-4 dark:text-white">Skills</h2>
-      <div className="mt-6 flex flex-wrap gap-3 dark:text-white dark:bg-blue-900">
+      <div className="mt-6 flex flex-wrap gap-3 dark:text-white ">
         {["Springboot" , "React", "Node.js", "MongoDB", "Java", "C++", "Docker", "Python", "Flask", "AWS", "SQL"].map(skill => (
-          <span key={skill} className="bg-gray-200 px-3 py-1 rounded">{skill}</span>
+          <span key={skill} className="bg-gray-200 px-3 py-1 rounded dark:bg-blue-900">{skill}</span>
         ))}
       </div>
     <br></br><br></br>
